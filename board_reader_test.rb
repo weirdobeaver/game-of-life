@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative 'board_reader'
+require_relative 'game_of_life'
 
   class TestBoardReader < Minitest::Test
     def setup
@@ -26,5 +26,5 @@ require_relative 'board_reader'
     def test_proper_live_and_dead_organism
       assert_equal '.', @board.data[1][3]
       assert_equal '*', @board.data[2][4]
-    end 
+    end
   end

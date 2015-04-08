@@ -1,15 +1,13 @@
-require_relative 'board'
-
 class BoardReader
   def initialize(board_input)
     @input = board_input.readlines
   end
 
   def board
-    board = Board.new(get_width, get_height, get_generation, get_data)
+    Board.new(get_width, get_height, get_generation, get_data)
   end
 
-  private 
+  private
 
   def get_width
     @input[1].split(' ')[1].to_i
@@ -17,7 +15,7 @@ class BoardReader
 
   def get_height
      @input[1].split(' ')[0].to_i
-  end 
+  end
 
   def get_generation
     @input[0].split(' ')[1].to_i
